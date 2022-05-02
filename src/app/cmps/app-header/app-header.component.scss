@@ -1,0 +1,41 @@
+.main-header {
+    // background-color: #fff;
+    color: #242526;
+    z-index: 2;
+
+    &.dark {
+        // background-color: #242526;
+        color: whitesmoke;
+    }
+
+    .header-content {
+        max-width: 1060px;
+        min-height: 7vh;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        img {
+            width: 45px;
+        }
+
+        nav {
+            ul {
+                display: flex;
+                gap: 10px;
+
+                li {
+                    cursor: pointer;
+                    img {
+                        width: 30px;
+                    }
+
+                    .home-icon {
+                        width: 35px;
+                    }
+                }
+            }
+        }
+    }
+}

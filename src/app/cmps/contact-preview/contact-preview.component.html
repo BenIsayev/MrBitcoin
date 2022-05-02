@@ -1,0 +1,16 @@
+<div class="contact-preview-container">
+    <div class="actions">
+        <a [routerLink]="['edit',contact._id]" class="edit-contact brk-btn">Edit</a>
+        <a (click)="removeContact(contact._id)" class="remove-btn brk-btn">Remove</a>
+    </div>
+    <a [routerLink]="[contact._id]" class="data">
+        <div class="contact-preview" [title]="contact.name">
+            <img src="../../../assets/img/contact.png" alt="">
+            <div class="details">
+                <span>Name: {{contact.name}}</span>
+                <span [title]="contact.phone">Phone: {{contact.phone}}</span>
+                <!-- <span [title]="contact.email">Email: {{contact.email}}</span> -->
+            </div>
+        </div>
+    </a>
+</div>

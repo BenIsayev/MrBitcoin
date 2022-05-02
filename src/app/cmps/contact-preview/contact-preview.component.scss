@@ -1,0 +1,125 @@
+.contact-preview-container {
+    position: relative;
+    cursor: pointer;
+    height: 100px;
+    width: 100%;
+    // background-color: #d89d54;
+    border-radius: 10px;
+    box-shadow: 0 0 5px;
+    font-size: 0.8rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    .contact-preview {
+        width: 100;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        height: 100%;
+        padding: 0 5px;
+        img {
+            width: 90px;
+        }
+        .details {
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-preview-container {
+        position: relative;
+        cursor: pointer;
+        height: 100px;
+        width: 100%;
+        // background-color: #d89d54;
+        border-radius: 10px;
+        box-shadow: 0 0 5px;
+        font-size: 0.8rem;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+        &:hover .actions {
+            .edit-contact,
+            .remove-btn {
+                pointer-events: all;
+            }
+        }
+
+        .contact-preview {
+            img {
+                width: 70px;
+            }
+        }
+    }
+    .actions {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        display: flex;
+        flex-direction: column;
+        transform: translateY(-50%);
+        text-align: center;
+        gap: 5px;
+
+        .brk-btn {
+            padding: 2px;
+        }
+    }
+}
+
+@media (min-width: 600px) {
+    .contact-preview-container {
+        &:hover .actions {
+            opacity: 1;
+            .edit-contact,
+            .remove-btn {
+                pointer-events: all;
+            }
+        }
+        .actions {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(
+                0deg,
+                rgba(212, 163, 47, 0) 25%,
+                rgba(0, 0, 0, 0.594297093837535) 50%,
+                rgba(0, 0, 0, 0.8043811274509804) 75%,
+                rgba(0, 0, 0, 0.874) 100%
+            );
+            display: flex;
+            justify-content: space-around;
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+        }
+        .edit-contact,
+        .remove-btn {
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 25px;
+            // transform: translate(35px, -50%);
+            transform: translate(-10px, -50%);
+            // background-color: #d89d54;
+            font-size: 0.8em;
+            transition: transform 0.3s;
+        }
+        .edit-contact {
+            right: 50px;
+        }
+        .remove-btn {
+            left: 67px;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+<section class="side-nav" [class.open-nav]="isSideNavOpen">
+    <div class="side-nav-btn" (click)="toggleSideNav()">
+        <img [class.close-nav]="!isSideNavOpen" src="../../../assets/img/right-arrow.png" alt="">
+    </div>
+    <div class="nav-header">
+        <h1>Options</h1>
+    </div>
+    <div class="actions">
+        <button (click)="switchBg()" class="brk-btn">Change background</button>
+    </div>
+
+</section>

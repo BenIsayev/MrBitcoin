@@ -1,0 +1,5 @@
+<div class="user-move">
+    <span *ngIf="!contact">To: {{move.to}} </span>
+    <span>Amount: {{move.amount | currency}}</span>
+    <span>At: {{move.at | date: 'dd/MM/yyyy, HH:mm:ss'}}</span>
+</div>

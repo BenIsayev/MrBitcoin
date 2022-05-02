@@ -1,1 +1,151 @@
 /* You can add global styles to this file, and also import other style files */
+
+$clr1: #242526;
+$clr2: #18191a;
+$clr3: #18191a;
+$clr4: #d89d54;
+
+@font-face {
+    font-family: "Ubuntu";
+    src: url("./assets/fonts/Ubuntu/Ubuntu-Regular.ttf");
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    // background-color: whitesmoke;
+    color: #18191a;
+    font-family: Ubuntu;
+    background-image: url("./assets/img/0.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: whitesmoke;
+
+    // &.dark {
+    // background-color: #18191a;
+    // }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.clean-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+main.main-app {
+    margin: auto;
+    max-width: 1060px;
+    padding: 0 20px;
+    max-height: 89vh;
+    overflow-y: auto;
+}
+
+// button {
+//     cursor: pointer;
+//     padding: 10px;
+//     background-color: #d89d54;
+//     border: none;
+//     font-family: Ubuntu;
+//     border-radius: 5px;
+//     box-shadow: 0 0 5px;
+// }
+
+.underlined-a {
+    text-decoration: none;
+    color: aqua;
+    padding-bottom: 0.15em;
+    box-sizing: border-box;
+    box-shadow: inset 0 -0.2em 0 aqua;
+    transition: 0.2s;
+    &:hover {
+        color: #222;
+        box-shadow: inset 0 -2em 0 aqua;
+        transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+    }
+}
+
+.brk-btn {
+    position: relative;
+    background: none;
+    color: aqua;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 0.2em solid aqua;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 10%;
+        background: #222;
+        height: 0.3em;
+        right: 20%;
+        top: -0.21em;
+        transform: skewX(-45deg);
+        -webkit-transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+        transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+    }
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 10%;
+        background: #222;
+        height: 0.3em;
+        left: 20%;
+        bottom: -0.25em;
+        transform: skewX(45deg);
+        -webkit-transition: all 0.45 cubic-bezier(0.86, 0, 0.07, 1);
+        transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+    }
+    &:hover {
+        &::before {
+            right: 80%;
+        }
+        &::after {
+            left: 80%;
+        }
+    }
+}
+
+::-webkit-scrollbar {
+    height: 12px;
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    // background: #d89d54;
+    background: aqua;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+input {
+    padding: 10px;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 3px;
+    &:focus-visible {
+        outline: none;
+    }
+}

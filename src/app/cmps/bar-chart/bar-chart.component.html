@@ -1,0 +1,22 @@
+<!-- <div>
+    <div>
+        <div style="display: block">
+            <canvas baseChart [data]="barChartData" [options]="barChartOptions" [plugins]="barChartPlugins"
+                [type]="barChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+            </canvas>
+        </div>
+    </div>
+</div> -->
+<div class="chart">
+    <div>
+        <div>
+            <button mat-button mat-raised-button color="primary" class="brk-btn"
+                (click)="randomize()">{{barChartType==='line'? 'Bars' :
+                'Lines'}}</button>
+            <div style="display: block">
+                <canvas baseChart [data]="barChartData" [options]="barChartOptions" [type]="barChartType"
+                    (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+            </div>
+        </div>
+    </div>
+</div>

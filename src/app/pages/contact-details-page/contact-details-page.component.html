@@ -1,0 +1,13 @@
+<section class="contact-details-container">
+
+    <section *ngIf="contact" class="contact-details">
+        <img src="../../../assets/img/contact.png" alt="">
+        <span>Name: {{contact.name}}</span>
+        <span>Phone: {{contact.phone}}</span>
+        <span>Email: {{contact.email}}</span>
+        <transfer-funds [contact]="contact" [user]="user"></transfer-funds>
+    </section>
+
+    <user-moves *ngIf="userMovesToContact.length" [moves]="userMovesToContact" [user]="user" [contact]="contact">
+    </user-moves>
+</section>

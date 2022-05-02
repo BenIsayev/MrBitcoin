@@ -1,0 +1,6 @@
+<section class="stats">
+    <h2>Transactions</h2>
+    <bar-chart *ngIf="transactionsData" [chartLabels]="transactionsData.labels"
+        [chartDatasets]="transactionsData.datasets">
+    </bar-chart>
+</section>

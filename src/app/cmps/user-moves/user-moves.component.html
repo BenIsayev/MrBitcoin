@@ -1,0 +1,7 @@
+<section class="user-moves">
+    <!-- <h1 >Transfers to {{contact.name}}:</h1> -->
+    <h1>{{contact? 'Transfers to '+contact.name+':' : 'Transfers:'}}</h1>
+    <div class="moves">
+        <user-move *ngFor="let move of moves" [move]="move" [contact]="contact"></user-move>
+    </div>
+</section>

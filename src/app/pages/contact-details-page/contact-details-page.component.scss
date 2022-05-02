@@ -1,0 +1,17 @@
+.contact-details-container {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    .contact-details {
+        box-shadow: 0 0 5px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        border-radius: 0.7rem;
+        img {
+            width: 200px;
+        }
+    }
+}

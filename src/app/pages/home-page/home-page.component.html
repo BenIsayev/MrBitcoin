@@ -1,0 +1,11 @@
+<section class="user-details">
+    <div class="details">
+        <img src="../../../assets/img/btc-bg.png" alt="">
+        <h1>{{'Welcome '+ user.name + '!' | naturalType}}</h1>
+        <span>{{'Balance:' | naturalType}} {{user.coins | currency}}</span>
+        <span>{{'Bitcoin:' | naturalType}} {{userBtc|| 'Loading rate'}}</span>
+    </div>
+    <div class="user-moves">
+        <user-moves [user]="user" [moves]="user.moves"></user-moves>
+    </div>
+</section>

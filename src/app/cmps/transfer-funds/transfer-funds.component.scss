@@ -1,0 +1,42 @@
+.transfer-funds {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    gap: 10px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 5px;
+
+    div {
+        input {
+            width: 70%;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+    }
+    input {
+        background-color: rgba(255, 255, 255, 0);
+        border: none;
+        border-bottom: 1px solid aqua;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 5px;
+        color: white;
+        &:focus-visible {
+            outline: none;
+        }
+    }
+    .msg {
+        padding: 5px;
+        border-radius: 0.2rem;
+        &.error {
+            background-color: red;
+        }
+        &.success {
+            background-color: green;
+        }
+    }
+    .brk-btn {
+        padding: 5px;
+    }
+}

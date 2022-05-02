@@ -1,0 +1,13 @@
+<section class="contact-list">
+    <a routerLink="edit" class="add-contact-container">
+        <div class="contact-preview">
+            <img src="../../../assets/img/add.png" alt="">
+            <div class="details">
+                <h2>Add a contact</h2>
+            </div>
+        </div>
+    </a>
+    <contact-preview *ngFor="let contact of contacts" [contact]="contact" (click)="setCurrContactId.emit(contact._id)">
+    </contact-preview>
+    <router-outlet></router-outlet>
+</section>

@@ -1,0 +1,50 @@
+.side-nav {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    top: 0;
+    height: 96vh;
+    background-color: #222827;
+    text-align: center;
+    padding: 2vh 30px;
+    transform: translateX(100%);
+    transition: transform 0.3s;
+    &.open-nav {
+        transform: translateX(0);
+    }
+
+    h1 {
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(100, 100, 100, 0.456);
+    }
+    .actions {
+        flex: 1;
+        display: flex;
+        align-items: center;
+    }
+
+    .lorem {
+        margin-top: 20px;
+    }
+
+    .side-nav-btn {
+        position: absolute;
+        font-size: 50px;
+        display: flex;
+        width: 30px;
+        height: 30px;
+        padding: 10px 5px 10px 5px;
+        left: 0;
+        top: 50%;
+        transform: translate(-100%, -50%);
+        border-radius: 50% 0 0 50%;
+        background-color: #01ffff;
+        cursor: pointer;
+        img {
+            &.close-nav {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}

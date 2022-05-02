@@ -1,0 +1,19 @@
+.user-moves {
+    // background-color: #d89d54;
+    box-shadow: 0 0 5px;
+    padding: 1rem 0.5rem 1rem 0.5rem;
+    border-radius: 0.7rem;
+    h1 {
+        padding-bottom: 10px;
+        border-bottom: 1px solid #5e5e5e75;
+        text-align: center;
+    }
+    .moves {
+        padding: 10px 0.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-height: 400px;
+        overflow-y: auto;
+    }
+}

@@ -1,0 +1,4 @@
+<section class="contacts-list">
+    <contact-filter></contact-filter>
+    <contact-list [contacts]="contacts$ | async" (setCurrContactId)="setCurrContactId.emit($event)"></contact-list>
+</section>

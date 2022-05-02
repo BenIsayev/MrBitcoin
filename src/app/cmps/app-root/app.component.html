@@ -1,0 +1,9 @@
+<section class="app-main">
+  <app-header [isDarkMode]="isDarkMode"></app-header>
+  <main class="main-app">
+    <router-outlet></router-outlet>
+  </main>
+
+  <side-nav (toggleDarkMode)="toggleDarkMode()"></side-nav>
+
+</section>

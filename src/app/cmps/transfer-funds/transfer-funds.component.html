@@ -1,0 +1,13 @@
+<section class="transfer-funds">
+    <span>
+        Transfer funds to: {{contact.name}}
+    </span>
+    <div>
+        <input placeholder="Amount in coins" [(ngModel)]="amount" type="nubmer">
+        <button (click)="onTransferFunds()" class="brk-btn">Send</button>
+    </div>
+    <span *ngIf="msg?.msg" [ngClass]="msg.type" class="msg">
+        {{msg.msg}}
+    </span>
+
+</section>

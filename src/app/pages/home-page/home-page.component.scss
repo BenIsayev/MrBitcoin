@@ -1,0 +1,18 @@
+.user-details {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    img {
+        position: absolute;
+        opacity: 0.6;
+        z-index: -1;
+    }
+    .details {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        position: relative;
+        font-weight: 600;
+        font-size: 1.3rem;
+    }
+}
