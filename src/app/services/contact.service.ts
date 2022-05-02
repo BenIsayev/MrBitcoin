@@ -150,6 +150,7 @@ export class ContactService {
     const contact = this._contactsDb.find(contact => contact._id === id)
 
     //return an observable
+
     return contact ? of(contact) : of(this.getEmptyContact())
   }
 

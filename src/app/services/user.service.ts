@@ -14,11 +14,20 @@ export class UserService {
   private _user$ = new BehaviorSubject<any>({})
   public user$ = this._user$.asObservable()
 
+  private _currUserMoves$ = new BehaviorSubject<any>({})
+  public currUserMoves$ = this._currUserMoves$.asObservable()
+
 
   // getUser(): Observable<User> {
   public getUser() {
     const user = JSON.parse(localStorage.getItem('user'))
     this._user$.next(user)
+  }
+
+  public getUserMoves(contact: Contact = null) {
+    const user = JSON.parse(localStorage.getItem('user'))
+    const moves = contact ? user.moves.filter(move => move.toId === contact._id) : user.moves
+    this._currUserMoves$.next(moves)
   }
 
   public signUp(username: string) {
@@ -55,7 +64,8 @@ export class UserService {
         amount
       })
       localStorage.setItem('user', JSON.stringify(user))
-      this._user$.next(user)
+      this._user$.next({ ...user })
+      this.getUserMoves(contact)
       return {
         msg: 'Funds successfuly transferred',
         type: 'success'

@@ -11,7 +11,7 @@ export class SideNavComponent implements OnInit {
 
   isSideNavOpen: boolean = false
   @Output() toggleDarkMode = new EventEmitter
-  backgroundUrls = ['../../../assets/img/0.png', '../../../assets/img/1.jpeg']
+  backgroundUrls = ['./assets/img/0.png', './assets/img/1.jpeg']
   currImgIdx = 0
 
 

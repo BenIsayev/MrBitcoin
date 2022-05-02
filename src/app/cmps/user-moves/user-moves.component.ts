@@ -3,6 +3,7 @@ import { Subscription } from 'rxjs';
 import { Contact } from 'src/app/models/contact.model';
 import { UserMove } from 'src/app/models/user-move.model';
 import { User } from 'src/app/models/user.model';
+import { ContactService } from 'src/app/services/contact.service';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -16,15 +17,14 @@ export class UserMovesComponent implements OnInit, OnDestroy {
 
   @Input() contact: Contact
   user: User
-  moves: ['']
-
+  moves: UserMove[] | any
   subscription: Subscription
 
   ngOnInit(): void {
-    this.subscription = this.userService.user$.subscribe((user) => {
-      this.user = user
-    })
+    this.userService.getUserMoves(this.contact)
+    this.subscription = this.userService.currUserMoves$.subscribe(moves => this.moves = moves)
   }
+
 
   ngOnDestroy(): void {
     this.subscription.unsubscribe()
