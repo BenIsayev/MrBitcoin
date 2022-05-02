@@ -26,6 +26,11 @@
             outline: none;
         }
     }
+    .dollar-sign {
+        position: absolute;
+        transform: translate(-25px, 5px);
+        color: aqua;
+    }
     .msg {
         padding: 5px;
         border-radius: 0.2rem;

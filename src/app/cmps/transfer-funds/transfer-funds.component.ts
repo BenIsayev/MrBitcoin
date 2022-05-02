@@ -33,16 +33,17 @@ export class TransferFundsComponent implements OnInit, OnDestroy {
         msg: 'Use only numbers',
         type: 'error'
       }
-      this.amount = 0
+      this.amount = null
     } else if (this.amount <= 0) {
       this.msg = {
         msg: 'Must be more than 0 coins',
         type: 'error'
       }
-      this.amount = 0
+      this.amount = null
     } else {
       const msg = this.userService.transferFunds(this.contact._id, this.amount)
       this.msg = msg
+      this.amount = null
     }
     setTimeout(() => {
       this.msg = {

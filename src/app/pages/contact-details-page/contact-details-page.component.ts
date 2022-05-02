@@ -15,13 +15,12 @@ export class ContactDetailsPageComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private userService: UserService) { }
 
-  @Input() contactId: string
-
-
+  // @Input() contactId: string
   contact: Contact;
   subscription: Subscription
   user: User
   userMovesToContact: UserMove[] = []
+  movesSubscription: Subscription
 
 
   async ngOnInit() {
@@ -33,19 +32,12 @@ export class ContactDetailsPageComponent implements OnInit {
     this.subscription = this.userService.user$.subscribe(user => {
       this.user = user
     })
-    this.filterMovesToContact()
+    this.userService.getUserMoves(this.contact)
+    this.movesSubscription = this.userService.currUserMoves$.subscribe(moves => this.userMovesToContact = moves)
   }
 
   ngOnDestroy(): void {
     this.subscription.unsubscribe()
-  }
-
-  filterMovesToContact() {
-    if (!this.user.moves.length) return
-    const moves = [...this.user.moves]
-    for (let i = 0; i < moves.length; i++) {
-      const move: UserMove = moves[i] as UserMove;
-      if (move.toId === this.contact._id) this.userMovesToContact.push(move)
-    }
+    this.movesSubscription.unsubscribe()
   }
 }
