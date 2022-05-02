@@ -60,7 +60,7 @@
             </div>
         </div>
     </div>
-    <div class="user-moves">
+    <div *ngIf="user.moves.length" class="user-moves">
         <user-moves></user-moves>
     </div>
 </section>
