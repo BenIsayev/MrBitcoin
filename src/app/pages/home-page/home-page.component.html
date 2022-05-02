@@ -1,11 +1,49 @@
 <section class="user-details">
-    <div class="details">
-        <img src="../../../assets/img/btc-bg.png" alt="">
-        <h1>{{'Welcome '+ user.name + '!' | naturalType}}</h1>
-        <span>{{'Balance:' | naturalType}} {{user.coins | currency}}</span>
-        <span>{{'Bitcoin:' | naturalType}} {{userBtc|| 'Loading rate'}}</span>
+    <div class="left-side">
+
+        <div class="details">
+            <img src="../../../assets/img/contact.png" alt="">
+            <h1>{{'Welcome '+ user.name + '!' | naturalType}}</h1>
+            <span>{{'Balance:' | naturalType}} {{user.coins | currency}}</span>
+            <span>{{'Bitcoin:' | naturalType}} {{userBtc|| 'Loading rate'}}</span>
+        </div>
+        <div class="news">
+            <h1>News feed</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quaerat eaque distinctio recusandae
+                dolorum. Eaque dolorem eum perspiciatis necessitatibus quisquam asperiores non laborum accusamus in
+                dolor officiis obcaecati minima impedit, tenetur eligendi laboriosam nam? Blanditiis molestiae iste
+                dolorem modi ipsam, rerum ipsa ex, maiores alias sapiente minus, a asperiores fuga.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quaerat eaque distinctio recusandae
+                dolorum. Eaque dolorem eum perspiciatis necessitatibus quisquam asperiores non laborum accusamus in
+                dolor officiis obcaecati minima impedit, tenetur eligendi laboriosam nam? Blanditiis molestiae iste
+                dolorem modi ipsam, rerum ipsa ex, maiores alias sapiente minus, a asperiores fuga.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quaerat eaque distinctio recusandae
+                dolorum. Eaque dolorem eum perspiciatis necessitatibus quisquam asperiores non laborum accusamus in
+                dolor officiis obcaecati minima impedit, tenetur eligendi laboriosam nam? Blanditiis molestiae iste
+                dolorem modi ipsam, rerum ipsa ex, maiores alias sapiente minus, a asperiores fuga.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quaerat eaque distinctio recusandae
+                dolorum. Eaque dolorem eum perspiciatis necessitatibus quisquam asperiores non laborum accusamus in
+                dolor officiis obcaecati minima impedit, tenetur eligendi laboriosam nam? Blanditiis molestiae iste
+                dolorem modi ipsam, rerum ipsa ex, maiores alias sapiente minus, a asperiores fuga.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quaerat eaque distinctio recusandae
+                dolorum. Eaque dolorem eum perspiciatis necessitatibus quisquam asperiores non laborum accusamus in
+                dolor officiis obcaecati minima impedit, tenetur eligendi laboriosam nam? Blanditiis molestiae iste
+                dolorem modi ipsam, rerum ipsa ex, maiores alias sapiente minus, a asperiores fuga.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quaerat eaque distinctio recusandae
+                dolorum. Eaque dolorem eum perspiciatis necessitatibus quisquam asperiores non laborum accusamus in
+                dolor officiis obcaecati minima impedit, tenetur eligendi laboriosam nam? Blanditiis molestiae iste
+                dolorem modi ipsam, rerum ipsa ex, maiores alias sapiente minus, a asperiores fuga.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quaerat eaque distinctio recusandae
+                dolorum. Eaque dolorem eum perspiciatis necessitatibus quisquam asperiores non laborum accusamus in
+                dolor officiis obcaecati minima impedit, tenetur eligendi laboriosam nam? Blanditiis molestiae iste
+                dolorem modi ipsam, rerum ipsa ex, maiores alias sapiente minus, a asperiores fuga.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quaerat eaque distinctio recusandae
+                dolorum. Eaque dolorem eum perspiciatis necessitatibus quisquam asperiores non laborum accusamus in
+                dolor officiis obcaecati minima impedit, tenetur eligendi laboriosam nam? Blanditiis molestiae iste
+                dolorem modi ipsam, rerum ipsa ex, maiores alias sapiente minus, a asperiores fuga.</p>
+        </div>
     </div>
     <div class="user-moves">
-        <user-moves [user]="user" [moves]="user.moves"></user-moves>
+        <user-moves></user-moves>
     </div>
 </section>

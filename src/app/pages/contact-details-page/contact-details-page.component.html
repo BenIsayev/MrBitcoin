@@ -8,6 +8,6 @@
         <transfer-funds [contact]="contact" [user]="user"></transfer-funds>
     </section>
 
-    <user-moves *ngIf="userMovesToContact.length" [moves]="userMovesToContact" [user]="user" [contact]="contact">
+    <user-moves *ngIf="userMovesToContact.length" [contact]="contact">
     </user-moves>
 </section>

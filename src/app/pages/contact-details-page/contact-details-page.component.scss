@@ -3,6 +3,7 @@
     display: flex;
     justify-content: space-around;
     .contact-details {
+        height: fit-content;
         box-shadow: 0 0 5px;
         display: flex;
         align-items: center;

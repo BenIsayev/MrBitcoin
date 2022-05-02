@@ -47,7 +47,5 @@ export class ContactDetailsPageComponent implements OnInit {
       const move: UserMove = moves[i] as UserMove;
       if (move.toId === this.contact._id) this.userMovesToContact.push(move)
     }
-    console.log(this.userMovesToContact);
-
   }
 }
