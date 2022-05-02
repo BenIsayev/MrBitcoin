@@ -16,6 +16,7 @@ export class SignupComponent implements OnInit {
   }
 
   onSubmit(form: NgForm) {
+    if (!form.value.fullname) return
     this.userService.signUp(form.value.fullname)
     this.router.navigateByUrl('')
   }
